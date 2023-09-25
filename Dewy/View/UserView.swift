@@ -34,7 +34,7 @@ struct UserView: View {
                 Section("Settings") {
                     DescriptionTapToActionSheetRowView(
                         title: "Units",
-                        description: preferredTemperatureUnit == .both ? "°C | °F" : preferredTemperatureUnit.description,
+                        description: preferredTemperatureUnit == .both ? "\(TemperatureUnit.celsius.description) | \(TemperatureUnit.fahrenheit.description)" : preferredTemperatureUnit.description,
                         options: TemperatureUnit.allCases.map { temperatureUnit in
                             return (title: temperatureUnit.description, action: { preferredTemperatureUnit = temperatureUnit })
                         }
