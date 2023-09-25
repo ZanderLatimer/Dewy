@@ -21,7 +21,14 @@ struct UserView: View {
         NavigationStack {
             List {
                 Section {
-                    DescriptionTapToActionSheetRowView(title: "Name", description: "Ness P.", options: [])
+                    DescriptionTapToTextFieldRowView(
+                        title: "Name",
+                        description: userName.count > 0 ? userName.capitalized : "...",
+                        textFieldTitle: "",
+                        textFieldPrompt: "Enter your name...",
+                        fieldContents: userName,
+                        completion: { newName in userName = newName }
+                    )
                     
                     DescriptionTapToActionSheetRowView(
                         title: "Skin Type",
