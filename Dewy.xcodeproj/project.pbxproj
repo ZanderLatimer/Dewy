@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1A00962AB25DA60017AAD1 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A00952AB25DA60017AAD1 /* PillView.swift */; };
 		3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE912AA7A7C9005C8718 /* Weather.swift */; };
 		3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE932AA7B32E005C8718 /* UVIndex.swift */; };
 		3D8FFEA92AA7B47B005C8718 /* UVIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1A00952AB25DA60017AAD1 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		3D8FFE912AA7A7C9005C8718 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3D8FFE932AA7B32E005C8718 /* UVIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndex.swift; sourceTree = "<group>"; };
 		3D8FFE9D2AA7B405005C8718 /* Unit Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3D8FFEB82AA80233005C8718 /* TemperatureSubView.swift */,
+				3D1A00952AB25DA60017AAD1 /* PillView.swift */,
 			);
 			path = "Sub-Elements";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				3DE7BA132AA295DA00C2444C /* MainTabView.swift in Sources */,
 				3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */,
 				3DE7BA022AA2882C00C2444C /* DewyApp.swift in Sources */,
+				3D1A00962AB25DA60017AAD1 /* PillView.swift in Sources */,
 				3D971BFF2AAA7F9400B0316E /* DataManager.swift in Sources */,
 				3D8FFEAF2AA7F5D0005C8718 /* Data.swift in Sources */,
 			);
