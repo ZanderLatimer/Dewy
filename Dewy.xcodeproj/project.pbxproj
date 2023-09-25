@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D1A00962AB25DA60017AAD1 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1A00952AB25DA60017AAD1 /* PillView.swift */; };
+		3D1B781F2AB266AD00B906C3 /* DescriptionTapToActionSheetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B781E2AB266AD00B906C3 /* DescriptionTapToActionSheetRowView.swift */; };
 		3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE912AA7A7C9005C8718 /* Weather.swift */; };
 		3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE932AA7B32E005C8718 /* UVIndex.swift */; };
 		3D8FFEA92AA7B47B005C8718 /* UVIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3D1A00952AB25DA60017AAD1 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
+		3D1B781E2AB266AD00B906C3 /* DescriptionTapToActionSheetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTapToActionSheetRowView.swift; sourceTree = "<group>"; };
 		3D8FFE912AA7A7C9005C8718 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3D8FFE932AA7B32E005C8718 /* UVIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndex.swift; sourceTree = "<group>"; };
 		3D8FFE9D2AA7B405005C8718 /* Unit Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1B781D2AB2668300B906C3 /* List Rows */ = {
+			isa = PBXGroup;
+			children = (
+				3D1B781E2AB266AD00B906C3 /* DescriptionTapToActionSheetRowView.swift */,
+			);
+			path = "List Rows";
+			sourceTree = "<group>";
+		};
 		3D8FFE902AA7A7AB005C8718 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		3D8FFEB72AA8021A005C8718 /* Sub-Elements */ = {
 			isa = PBXGroup;
 			children = (
+				3D1B781D2AB2668300B906C3 /* List Rows */,
 				3D8FFEB82AA80233005C8718 /* TemperatureSubView.swift */,
 				3D1A00952AB25DA60017AAD1 /* PillView.swift */,
 			);
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1B781F2AB266AD00B906C3 /* DescriptionTapToActionSheetRowView.swift in Sources */,
 				3DE7BA042AA2882C00C2444C /* TodayView.swift in Sources */,
 				3D8FFEB32AA7F709005C8718 /* CurrentWeatherCardView.swift in Sources */,
 				3D971BFA2AAA7A9B00B0316E /* Temperature.swift in Sources */,
