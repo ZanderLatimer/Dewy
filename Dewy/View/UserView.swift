@@ -9,59 +9,59 @@ import SwiftUI
 
 struct UserView: View {
     
-    @AppStorage(UserDefaults.Keys.UserView.userName) var userName: String = ""
-    @AppStorage(UserDefaults.Keys.UserView.skinType) var userSkinType: SkinType = .normal
-    @AppStorage(UserDefaults.Keys.UserView.temperatureUnit) var preferredTemperatureUnit: TemperatureUnit = .celsius
-    @AppStorage(UserDefaults.Keys.UserView.timeFormat) var preferredTimeFormat: TimeFormat = .twelveHour
-    @AppStorage(UserDefaults.Keys.UserView.appTheme) var appTheme: String = "Light"
-    @AppStorage(UserDefaults.Keys.UserView.appIcon) var appIcon: String = "Default"
-    @AppStorage(UserDefaults.Keys.UserView.appLanguage) var appLanguage: String = "English (US)"
+    @AppStorage(UserDefaults.Keys.UserView.userName) private var userName: String = ""
+    @AppStorage(UserDefaults.Keys.UserView.skinType) private var userSkinType: SkinType = .normal
+    @AppStorage(UserDefaults.Keys.UserView.temperatureUnit) private var preferredTemperatureUnit: TemperatureUnit = .celsius
+    @AppStorage(UserDefaults.Keys.UserView.timeFormat) private var preferredTimeFormat: TimeFormat = .twelveHour
+    @AppStorage(UserDefaults.Keys.UserView.appTheme) private var appTheme: String = "Light"
+    @AppStorage(UserDefaults.Keys.UserView.appIcon) private var appIcon: String = "Default"
+    @AppStorage(UserDefaults.Keys.UserView.appLanguage) private var appLanguage: String = "English (US)"
     
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     DescriptionTapToTextFieldRowView(
-                        title: "Name",
-                        description: userName.count > 0 ? userName.capitalized : "...",
+                        rowTitle: "Name",
+                        rowDescription: userName.count > 0 ? userName.capitalized : "...",
                         textFieldTitle: "",
                         textFieldPrompt: "Enter your name...",
-                        fieldContents: userName,
+                        textFieldContents: userName,
                         completion: { newName in userName = newName }
                     )
                     
                     DescriptionTapToActionSheetRowView(
-                        title: "Skin Type",
-                        description: userSkinType.description,
-                        options: SkinType.allCases.map { skinType in
+                        rowTitle: "Skin Type",
+                        rowDescription: userSkinType.description,
+                        actionSheetOptions: SkinType.allCases.map { skinType in
                             return (title: skinType.description, action: { userSkinType = skinType })
                         }
                     )
                 }
                 Section("Settings") {
                     DescriptionTapToActionSheetRowView(
-                        title: "Units",
-                        description: preferredTemperatureUnit == .both ? "\(TemperatureUnit.celsius.description) | \(TemperatureUnit.fahrenheit.description)" : preferredTemperatureUnit.description,
-                        options: TemperatureUnit.allCases.map { temperatureUnit in
+                        rowTitle: "Units",
+                        rowDescription: preferredTemperatureUnit == .both ? "\(TemperatureUnit.celsius.description) | \(TemperatureUnit.fahrenheit.description)" : preferredTemperatureUnit.description,
+                        actionSheetOptions: TemperatureUnit.allCases.map { temperatureUnit in
                             return (title: temperatureUnit.description, action: { preferredTemperatureUnit = temperatureUnit })
                         }
                     )
                     DescriptionTapToActionSheetRowView(
-                        title: "Time Format",
-                        description: preferredTimeFormat.description,
-                        options: TimeFormat.allCases.map { timeFormat in
+                        rowTitle: "Time Format",
+                        rowDescription: preferredTimeFormat.description,
+                        actionSheetOptions: TimeFormat.allCases.map { timeFormat in
                             return (title: timeFormat.description, action: { preferredTimeFormat = timeFormat })
                         }
                     )
                 }
                 Section("Theme") {
-                    DescriptionTapToActionSheetRowView(title: "Theme", description: appTheme, options: [])
-                    DescriptionTapToActionSheetRowView(title: "App Icon", description: appIcon, options: [])
-                    DescriptionTapToActionSheetRowView(title: "Language", description: appLanguage, options: [])
+                    DescriptionTapToActionSheetRowView(rowTitle: "Theme", rowDescription: appTheme, actionSheetOptions: [])
+                    DescriptionTapToActionSheetRowView(rowTitle: "App Icon", rowDescription: appIcon, actionSheetOptions: [])
+                    DescriptionTapToActionSheetRowView(rowTitle: "Language", rowDescription: appLanguage, actionSheetOptions: [])
                 }
                 Section("About") {
-                    DescriptionTapToActionSheetRowView(title: "Info", description: "", options: [])
-                    DescriptionTapToActionSheetRowView(title: "About Dewy", description: "", options: [])
+                    DescriptionTapToActionSheetRowView(rowTitle: "Info", rowDescription: "", actionSheetOptions: [])
+                    DescriptionTapToActionSheetRowView(rowTitle: "About Dewy", rowDescription: "", actionSheetOptions: [])
                 }
             }
             .navigationTitle("About Me")

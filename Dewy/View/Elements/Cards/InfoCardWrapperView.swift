@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoCardWrapperView<Content: View>: View {
     
-    @ViewBuilder let content: () -> Content
+    @ViewBuilder private let content: () -> Content
     
     var body: some View {
         ZStack {

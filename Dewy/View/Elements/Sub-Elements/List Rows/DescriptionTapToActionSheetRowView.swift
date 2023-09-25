@@ -9,12 +9,12 @@ import SwiftUI
 
 struct DescriptionTapToActionSheetRowView: View {
     
-    var title: String
-    var description: String
+    private var title: String
+    private var description: String
     
-    var options: [(title: String, action: () -> ())]
+    private var options: [(title: String, action: () -> ())]
     
-    @State var showingActionSheet: Bool = false
+    @State private var showingActionSheet: Bool = false
     
     var body: some View {
         HStack {
@@ -32,10 +32,23 @@ struct DescriptionTapToActionSheetRowView: View {
                 }
         }
     }
+    
+    init(
+        rowTitle: String,
+        rowDescription: String,
+        actionSheetOptions: [(title: String, action: () -> Void)]) {
+        self.title = rowTitle
+        self.description = rowDescription
+        self.options = actionSheetOptions
+    }
 }
 
 struct DescriptionTapToActionSheetRowView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionTapToActionSheetRowView(title: "Title", description: "Description", options: [("Option A", {})])
+        DescriptionTapToActionSheetRowView(
+            rowTitle: "Title",
+            rowDescription: "Description",
+            actionSheetOptions: [("Option A", {})]
+        )
     }
 }

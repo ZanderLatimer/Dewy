@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
     
-    @EnvironmentObject var today: Today
+    @EnvironmentObject private var today: Today
     
     var body: some View {
         NavigationStack {

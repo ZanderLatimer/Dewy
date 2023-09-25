@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TemperatureSubView: View {
     
-    enum DisplayType: String {
+    private enum DisplayType: String {
         case celsius = "Celsius"
         case fahrenheit = "Fahrenhiet"
         case both = "Both"
@@ -29,7 +29,7 @@ struct TemperatureSubView: View {
         }
     }
     
-    let temperatureCelsius: Double?
+    private let temperatureCelsius: Double?
     
     var body: some View {
         if let temperatureCelsius = temperatureCelsius {
@@ -51,6 +51,10 @@ struct TemperatureSubView: View {
         else {
             Text("-")
         }
+    }
+    
+    init(temperatureCelsius: Double?) {
+        self.temperatureCelsius = temperatureCelsius
     }
 }
 

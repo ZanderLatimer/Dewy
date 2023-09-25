@@ -13,15 +13,15 @@ struct DescriptionTapToTextFieldRowView: View {
         case textField
     }
     
-    var title: String
-    var description: String
+    private let title: String
+    private let description: String
     
-    var textFieldTitle: String
-    var textFieldPrompt: String
+    private let textFieldTitle: String
+    private let textFieldPrompt: String
     
-    @State var fieldContents: String = ""
+    private let completion: (String) -> ()
     
-    var completion: (String) -> ()
+    @State private var fieldContents: String = ""
     
     @State private var showingAlert: Bool = false
     @FocusState private var focused: Bool
@@ -49,16 +49,30 @@ struct DescriptionTapToTextFieldRowView: View {
         }
     }
     
-    
+    init(
+        rowTitle: String,
+        rowDescription: String,
+        textFieldTitle: String,
+        textFieldPrompt: String,
+        textFieldContents: String,
+        completion: @escaping (String) -> Void) {
+        self.title = rowTitle
+        self.description = rowDescription
+        self.textFieldTitle = textFieldTitle
+        self.textFieldPrompt = textFieldPrompt
+        self.fieldContents = textFieldContents
+        self.completion = completion
+    }
 }
 
 struct DescriptionTapToTextFieldRowView_Previews: PreviewProvider {
     static var previews: some View {
         DescriptionTapToTextFieldRowView(
-            title: "Name",
-            description: "Ness P.",
+            rowTitle: "Name",
+            rowDescription: "Ness P.",
             textFieldTitle: "",
             textFieldPrompt: "",
+            textFieldContents: "",
             completion: { _ in })
     }
 }

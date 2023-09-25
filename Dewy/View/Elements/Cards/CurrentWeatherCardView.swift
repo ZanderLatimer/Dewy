@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrentWeatherCardView: View {
     
-    let weather: Weather?
+    private let weather: Weather?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,6 +24,10 @@ struct CurrentWeatherCardView: View {
             }
             Text("Test")
         }
+    }
+    
+    init(weather: Weather?) {
+        self.weather = weather
     }
 }
 
