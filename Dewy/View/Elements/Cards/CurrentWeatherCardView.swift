@@ -16,6 +16,11 @@ struct CurrentWeatherCardView: View {
             HStack {
                 Text("Current: ")
                 TemperatureSubView(temperatureCelsius: weather?.temperatureCelsius)
+                
+                if let value = weather?.uvIndex?.stringValue,
+                   let colour = weather?.uvIndex?.colour {
+                    PillView(value: "UVI \(value)", colour: Color(colour))
+                }
             }
             Text("Test")
         }

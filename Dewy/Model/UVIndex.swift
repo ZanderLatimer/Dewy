@@ -27,7 +27,7 @@ struct UVIndex: Codable {
             }
         }
         
-        var description: String {
+        var classification: String {
             return self.rawValue
         }
         
@@ -42,11 +42,15 @@ struct UVIndex: Codable {
         }
     }
     
-    let value: Double
-    let uvIndex: UVIndex
+    private let value: Double
+    private let uvIndex: UVIndex
     
-    var name: String {
-        return uvIndex.description
+    var stringValue: String {
+        return "\(value)"
+    }
+    
+    var classification: String {
+        return uvIndex.classification
     }
     
     var colour: String {
