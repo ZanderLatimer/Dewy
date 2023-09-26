@@ -22,6 +22,32 @@ extension UserDefaults {
             static let appLanguage = "appLanguage"
         }
     }
+    
+    // MARK: Accessors
+    
+    // MARK: UserView
+    
+    var userName: String {
+        return string(forKey: Keys.UserView.userName) ?? ""
+    }
+    
+    var userSkinType: SkinType {
+        let rawSkinType = string(forKey: Keys.UserView.skinType)
+        
+        return SkinType(userDefaultsValue: rawSkinType)
+    }
+    
+    var preferredTemperatureUnit: TemperatureUnit {
+        let rawTemperatureUnit = string(forKey: Keys.UserView.temperatureUnit)
+        
+        return TemperatureUnit(userDefaultsValue: rawTemperatureUnit)
+    }
+    
+    var preferredTimeFormat: TimeFormat {
+        let rawTimeFormat = string(forKey: Keys.UserView.timeFormat)
+        
+        return TimeFormat(userDefaultsValue: rawTimeFormat)
+    }
 }
 
 enum SkinType: String, CaseIterable {
