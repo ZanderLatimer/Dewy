@@ -1,5 +1,5 @@
 //
-//  SingleSelectionList.swift
+//  SingleSelectionListView.swift
 //  Dewy
 //
 //  Created by Zander Latimer on 9/26/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SingleSelectionList<ListItem: UniqueDescribable>: View {
+struct SingleSelectionListView<ListItem: UniqueDescribable>: View {
     
     @Binding private var selectedListItem: ListItem?
     
@@ -33,13 +33,14 @@ struct SingleSelectionList<ListItem: UniqueDescribable>: View {
     }
 }
 
-struct ThemeSelectView_Previews: PreviewProvider {
+struct SingleSelectionListView_Previews: PreviewProvider {
+    
     static var previews: some View {
         let listItemA = AppTheme.system
         let listItemB = AppTheme.light
         let listItemC = AppTheme.dark
         
-        SingleSelectionList(
+        SingleSelectionListView(
             listItems: [
                 listItemA,
                 listItemB,

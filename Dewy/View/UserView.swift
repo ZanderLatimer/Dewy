@@ -59,7 +59,7 @@ struct UserView: View {
                         title: "Theme",
                         description: appTheme.description,
                         linkDestination: {
-                            SingleSelectionList<AppTheme>(
+                            SingleSelectionListView<AppTheme>(
                                 listItems: AppTheme.allCases,
                                 selectedListItem: Binding<AppTheme?>($appTheme),
                                 selectionChangedAction: { newValue in
