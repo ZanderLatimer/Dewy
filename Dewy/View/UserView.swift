@@ -13,7 +13,7 @@ struct UserView: View {
     @AppStorage(UserDefaults.Keys.UserView.skinType) private var userSkinType: SkinType = .normal
     @AppStorage(UserDefaults.Keys.UserView.temperatureUnit) private var preferredTemperatureUnit: TemperatureUnit = .celsius
     @AppStorage(UserDefaults.Keys.UserView.timeFormat) private var preferredTimeFormat: TimeFormat = .twelveHour
-    @AppStorage(UserDefaults.Keys.UserView.appTheme) private var appTheme: String = "Light"
+    @AppStorage(UserDefaults.Keys.UserView.appTheme) private var appTheme: AppTheme = .system
     @AppStorage(UserDefaults.Keys.UserView.appIcon) private var appIcon: String = "Default"
     @AppStorage(UserDefaults.Keys.UserView.appLanguage) private var appLanguage: String = "English (US)"
     
