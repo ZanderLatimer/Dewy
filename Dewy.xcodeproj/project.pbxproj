@@ -98,13 +98,37 @@
 			path = "List Rows";
 			sourceTree = "<group>";
 		};
-		3D8FFE902AA7A7AB005C8718 /* Model */ = {
+		3D8B864A2B4A0474001D958F /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				3D1B781D2AB2668300B906C3 /* List Rows */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		3D8B864F2B4A04F8001D958F /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
 				3D8FFE912AA7A7C9005C8718 /* Weather.swift */,
 				3D8FFE932AA7B32E005C8718 /* UVIndex.swift */,
 				3D8FFEB02AA7F6A4005C8718 /* Location.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		3D8B86502B4A050E001D958F /* App Models */ = {
+			isa = PBXGroup;
+			children = (
 				3D1B78202AB2732B00B906C3 /* UserSettings.swift */,
+			);
+			path = "App Models";
+			sourceTree = "<group>";
+		};
+		3D8FFE902AA7A7AB005C8718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D8B86502B4A050E001D958F /* App Models */,
+				3D8B864F2B4A04F8001D958F /* Data Models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,7 +163,6 @@
 		3D8FFEB72AA8021A005C8718 /* Sub-Elements */ = {
 			isa = PBXGroup;
 			children = (
-				3D1B781D2AB2668300B906C3 /* List Rows */,
 				3D8FFEB82AA80233005C8718 /* TemperatureSubView.swift */,
 				3D1A00952AB25DA60017AAD1 /* PillView.swift */,
 			);
@@ -210,6 +233,7 @@
 		3DE7BA142AA295E100C2444C /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				3D8B864A2B4A0474001D958F /* Lists */,
 				3D8FFEB72AA8021A005C8718 /* Sub-Elements */,
 				3D8FFEB62AA8020F005C8718 /* Cards */,
 			);
