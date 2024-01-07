@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A `List` row that displays a Title and Description. Presents an `ActionSheet` when tapped.
+ */
 struct DescriptionTapToActionSheetRowView: View {
     
     private var title: String
@@ -19,7 +22,9 @@ struct DescriptionTapToActionSheetRowView: View {
     var body: some View {
         HStack {
             Text(title)
+            
             Spacer()
+            
             Text(description)
                 .foregroundColor(.blue)
                 .onTapGesture {
@@ -44,6 +49,7 @@ struct DescriptionTapToActionSheetRowView: View {
 }
 
 struct DescriptionTapToActionSheetRowView_Previews: PreviewProvider {
+    
     static var previews: some View {
         DescriptionTapToActionSheetRowView(
             rowTitle: "Title",

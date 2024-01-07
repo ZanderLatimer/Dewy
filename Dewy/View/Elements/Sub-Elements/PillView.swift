@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A 'pill' shaped view that displays some text and can be coloured.
+ */
 struct PillView: View {
     
     enum PillSize {
@@ -37,6 +40,7 @@ struct PillView: View {
 }
 
 struct PillView_Previews: PreviewProvider {
+    
     static var previews: some View {
         PillView(value: "UVI 10", colour: .indigo)
     }

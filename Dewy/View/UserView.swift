@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ Defines the 'User' aka 'About Me' screen.
+ */
 struct UserView: View {
     
     @AppStorage(UserDefaults.Keys.UserView.userName) private var userName: String = ""
@@ -85,6 +88,7 @@ struct UserView: View {
 }
 
 struct UserView_Previews: PreviewProvider {
+    
     static var previews: some View {
         UserView()
     }

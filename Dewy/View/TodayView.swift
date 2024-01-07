@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ Defines the 'Today' screen.
+ */
 struct TodayView: View {
     
     @EnvironmentObject private var today: Today
@@ -33,6 +36,7 @@ struct TodayView: View {
 }
 
 struct TodayView_Previews: PreviewProvider {
+    
     static var previews: some View {
         TodayView().environmentObject(Today())
     }

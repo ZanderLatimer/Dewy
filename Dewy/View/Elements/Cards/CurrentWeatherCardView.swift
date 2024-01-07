@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A card view that displays the current weather.
+ */
 struct CurrentWeatherCardView: View {
     
     private let weather: Weather?
@@ -32,6 +35,7 @@ struct CurrentWeatherCardView: View {
 }
 
 struct CurrentWeatherCardView_Previews: PreviewProvider {
+    
     static var previews: some View {
         let weather = Weather(
             requestTimestamp: Date.now,

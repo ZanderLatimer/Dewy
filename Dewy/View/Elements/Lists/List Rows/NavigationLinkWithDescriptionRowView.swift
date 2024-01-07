@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A `List` row that displays a Title, Description and Disclosure Indicator. Navigates to another screen when tapped.
+ */
 struct NavigationLinkWithDescriptionRowView<LinkContent: View>: View {
     
     private let title: String
@@ -20,7 +23,9 @@ struct NavigationLinkWithDescriptionRowView<LinkContent: View>: View {
         } label: {
             HStack {
                 Text(title)
+                
                 Spacer()
+                
                 Text(description)
                     .foregroundColor(.secondary)
             }
@@ -35,6 +40,7 @@ struct NavigationLinkWithDescriptionRowView<LinkContent: View>: View {
 }
 
 struct NavigationLinkWithDescriptionRowView_Previews: PreviewProvider {
+    
     static var previews: some View {
         NavigationLinkWithDescriptionRowView(
             title: "Title",

@@ -7,9 +7,13 @@
 
 import Foundation
 
+// UserDefaults convenience functions.
 extension UserDefaults {
     
+    /// Defined keys for accessing data saved in `UserDefaults`.
     enum Keys {
+        
+        /// Defined keys for accessing data saved for the `UserView` in `UserDefaults`.
         enum UserView {
             static let userName = "userName"
             static let skinType = "skinType"
@@ -27,28 +31,33 @@ extension UserDefaults {
     
     // MARK: UserView
     
+    /// Returns the 'User Name' entered on the `UserView` from `UserDefaults`.
     var userName: String {
         return string(forKey: Keys.UserView.userName) ?? ""
     }
     
+    /// Returns the 'Skin Type' entered on the `UserView` from `UserDefaults`.
     var userSkinType: SkinType {
         let rawSkinType = string(forKey: Keys.UserView.skinType)
         
         return SkinType(userDefaultsValue: rawSkinType)
     }
     
+    /// Returns the 'Temperature Unit' entered on the `UserView` from `UserDefaults`.
     var preferredTemperatureUnit: TemperatureUnit {
         let rawTemperatureUnit = string(forKey: Keys.UserView.temperatureUnit)
         
         return TemperatureUnit(userDefaultsValue: rawTemperatureUnit)
     }
     
+    /// Returns the 'Time Format' entered on the `UserView` from `UserDefaults`.
     var preferredTimeFormat: TimeFormat {
         let rawTimeFormat = string(forKey: Keys.UserView.timeFormat)
         
         return TimeFormat(userDefaultsValue: rawTimeFormat)
     }
     
+    /// Returns the 'App Theme' entered on the `UserView` from `UserDefaults`.
     var appTheme: AppTheme {
         let rawAppTheme = string(forKey: Keys.UserView.appTheme)
         
@@ -56,6 +65,7 @@ extension UserDefaults {
     }
 }
 
+/// Defines a 'Skin Type' ie. a user selectable value for the type of skin that they have.
 enum SkinType: String, CaseIterable {
     case normal
     case oily
@@ -79,6 +89,7 @@ enum SkinType: String, CaseIterable {
     }
 }
 
+/// Defines a 'Temperature Unit' ie. the temperature style to use throughout the app.
 enum TemperatureUnit: String, CaseIterable {
     case celsius
     case fahrenheit
@@ -89,6 +100,8 @@ enum TemperatureUnit: String, CaseIterable {
         case TemperatureUnit.celsius.rawValue: self = .celsius
         case TemperatureUnit.fahrenheit.rawValue: self = .fahrenheit
         case TemperatureUnit.both.rawValue: self = .both
+        // If the user has not saved a unit to UserDefaults, then we make a choice
+        // based on their location
         default:
             switch Locale.autoupdatingCurrent.measurementSystem {
             case .metric, .uk: self = .celsius
@@ -107,6 +120,7 @@ enum TemperatureUnit: String, CaseIterable {
     }
 }
 
+/// Defines a 'Time Format' ie. the time format to use throughout the app.
 enum TimeFormat: String, CaseIterable {
     case twelveHour
     case twentyFourHour
@@ -127,6 +141,7 @@ enum TimeFormat: String, CaseIterable {
     }
 }
 
+/// Defines an 'App Theme' ie. the colour scheme to use throughout the app.
 enum AppTheme: String, CaseIterable, UniqueDescribable {
     case system
     case light

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A `List` row that displays a Title and Description. Displays a checkmark when tapped.
+ */
 struct CheckmarkListRowView<ListItem: UniqueDescribable>: View {
     
     @Binding private var selectedListItem: ListItem?

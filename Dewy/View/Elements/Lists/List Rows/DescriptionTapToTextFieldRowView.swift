@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A `List` row that displays a Title and Description. Presents a `TextField` when tapped.
+ */
 struct DescriptionTapToTextFieldRowView: View {
     
     private enum FocusedField {
@@ -29,7 +32,9 @@ struct DescriptionTapToTextFieldRowView: View {
     var body: some View {
         HStack {
             Text(title)
+            
             Spacer()
+            
             Text(description)
                 .foregroundColor(.blue)
                 .onTapGesture {
@@ -66,6 +71,7 @@ struct DescriptionTapToTextFieldRowView: View {
 }
 
 struct DescriptionTapToTextFieldRowView_Previews: PreviewProvider {
+    
     static var previews: some View {
         DescriptionTapToTextFieldRowView(
             rowTitle: "Name",

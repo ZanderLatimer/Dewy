@@ -7,6 +7,10 @@
 
 import Foundation
 
+/**
+ A `UniqueDescribable` has both a unique identifier as well as a human readable description.
+ */
 protocol UniqueDescribable: Identifiable, Hashable {
+    
     var description: String { get }
 }

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A 'wrapper' view that surrounds its content in a 'card' style shape.
+ */
 struct InfoCardWrapperView<Content: View>: View {
     
     @ViewBuilder private let content: () -> Content
@@ -30,6 +33,7 @@ struct InfoCardWrapperView<Content: View>: View {
 }
 
 struct InfoCardWrapperView_Previews: PreviewProvider {
+    
     static var previews: some View {
         InfoCardWrapperView(content: { Text("Hello, world!") })
     }

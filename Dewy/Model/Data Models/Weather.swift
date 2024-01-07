@@ -12,6 +12,9 @@ class Today: ObservableObject {
     @Published var currentWeather: Weather?
 }
 
+/**
+ Models weather information for a particular time and place, such as the temperature and UV index.
+ */
 struct Weather: Codable {
     
     let requestTimestamp: Date

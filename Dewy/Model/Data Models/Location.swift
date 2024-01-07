@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Holds the latitude and longitude of a location.
+ */
 struct Location: Codable {
     
     let latitude: Double

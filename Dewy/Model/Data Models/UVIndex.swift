@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Models a UV Index reading, such as its value, classification and colour.
+ */
 struct UVIndex: Codable {
     
     enum UVIndex: String, Codable {

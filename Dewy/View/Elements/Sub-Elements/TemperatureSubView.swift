@@ -59,6 +59,7 @@ struct TemperatureSubView: View {
 }
 
 struct TemperatureSubView_Previews: PreviewProvider {
+    
     static var previews: some View {
         TemperatureSubView(temperatureCelsius: 21)
     }
