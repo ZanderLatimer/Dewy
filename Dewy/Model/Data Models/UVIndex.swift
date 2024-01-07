@@ -36,11 +36,11 @@ struct UVIndex: Codable {
         
         var colour: String {
             switch self {
-            case .low: return "uv_index_low"
-            case .moderate: return "uv_index_moderate"
-            case .high: return "uv_index_high"
-            case .veryHigh: return "uv_index_very_high"
-            case .extreme: return "uv_index_extreme"
+            case .low: return "uvIndexLow"
+            case .moderate: return "uvIndexModerate"
+            case .high: return "uvIndexHigh"
+            case .veryHigh: return "uvIndexVeryHigh"
+            case .extreme: return "uvIndexExtreme"
             }
         }
     }

@@ -29,7 +29,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 0)
         XCTAssertEqual(unwrappedSut.uvIndex, .low)
         XCTAssertEqual(unwrappedSut.name, "Low")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_low")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexLow")
     }
     
     func test_uvIndex_withUpperBoundLowValue_shouldInitialiseAsLow() throws {
@@ -40,7 +40,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 2.9)
         XCTAssertEqual(unwrappedSut.uvIndex, .low)
         XCTAssertEqual(unwrappedSut.name, "Low")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_low")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexLow")
     }
     
     func test_uvIndex_withLowerBoundModerateValue_shouldInitialiseAsModerate() throws {
@@ -51,7 +51,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 3)
         XCTAssertEqual(unwrappedSut.uvIndex, .moderate)
         XCTAssertEqual(unwrappedSut.name, "Moderate")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_moderate")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexModerate")
     }
     
     func test_uvIndex_withUpperBoundModerateValue_shouldInitialiseAsModerate() throws {
@@ -62,7 +62,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 5.9)
         XCTAssertEqual(unwrappedSut.uvIndex, .moderate)
         XCTAssertEqual(unwrappedSut.name, "Moderate")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_moderate")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexModerate")
     }
     
     func test_uvIndex_withLowerBoundHighValue_shouldInitialiseAsHigh() throws {
@@ -73,7 +73,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 6)
         XCTAssertEqual(unwrappedSut.uvIndex, .high)
         XCTAssertEqual(unwrappedSut.name, "High")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_high")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexHigh")
     }
     
     func test_uvIndex_withUpperBoundHighValue_shouldInitialiseAsHigh() throws {
@@ -84,7 +84,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 7.9)
         XCTAssertEqual(unwrappedSut.uvIndex, .high)
         XCTAssertEqual(unwrappedSut.name, "High")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_high")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexHigh")
     }
     
     func test_uvIndex_withLowerBoundVeryHighValue_shouldInitialiseAsVeryHigh() throws {
@@ -95,7 +95,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 8)
         XCTAssertEqual(unwrappedSut.uvIndex, .veryHigh)
         XCTAssertEqual(unwrappedSut.name, "Very High")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_very_high")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexVeryHigh")
     }
     
     func test_uvIndex_withUpperBoundVeryHighValue_shouldInitialiseAsVeryHigh() throws {
@@ -106,7 +106,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 10.9)
         XCTAssertEqual(unwrappedSut.uvIndex, .veryHigh)
         XCTAssertEqual(unwrappedSut.name, "Very High")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_very_high")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexVeryHigh")
     }
     
     func test_uvIndex_withLowerBoundExtremeValue_shouldInitialiseAsExtreme() throws {
@@ -117,7 +117,7 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 11)
         XCTAssertEqual(unwrappedSut.uvIndex, .extreme)
         XCTAssertEqual(unwrappedSut.name, "Extreme")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_extreme")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexExtreme")
     }
     
     func test_uvIndex_withUspperBoundExtremeValue_shouldInitialiseAsExtreme() throws {
@@ -128,6 +128,6 @@ class UVIndexTests: XCTestCase {
         XCTAssertEqual(unwrappedSut.value, 20)
         XCTAssertEqual(unwrappedSut.uvIndex, .extreme)
         XCTAssertEqual(unwrappedSut.name, "Extreme")
-        XCTAssertEqual(unwrappedSut.colour, "uv_index_extreme")
+        XCTAssertEqual(unwrappedSut.colour, "uvIndexExtreme")
     }
 }
