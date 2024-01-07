@@ -54,8 +54,23 @@ struct UserView: View {
                         }
                     )
                 }
-                Section("Theme") {
-                    DescriptionTapToActionSheetRowView(rowTitle: "Theme", rowDescription: appTheme, actionSheetOptions: [])
+                Section("App") {
+                    NavigationLinkWithDescriptionRowView(
+                        title: "Theme",
+                        description: appTheme.description,
+                        linkDestination: {
+                            SingleSelectionList<AppTheme>(
+                                listItems: AppTheme.allCases,
+                                selectedListItem: Binding<AppTheme?>($appTheme),
+                                selectionChangedAction: { newValue in
+                                    // TODO: Change the theme here
+                                }
+                            )
+                            .navigationTitle("Theme")
+                                
+                        }
+                    )
+                    
                     DescriptionTapToActionSheetRowView(rowTitle: "App Icon", rowDescription: appIcon, actionSheetOptions: [])
                     DescriptionTapToActionSheetRowView(rowTitle: "Language", rowDescription: appLanguage, actionSheetOptions: [])
                 }
