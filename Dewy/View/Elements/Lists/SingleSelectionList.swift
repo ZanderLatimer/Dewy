@@ -17,7 +17,7 @@ struct SingleSelectionList<ListItem: UniqueDescribable>: View {
     var body: some View {
         List {
             ForEach(listItems, id: \.self) { listItem in
-                CheckmarkListRow<ListItem>(listItem: listItem, selectedListItem: $selectedListItem)
+                CheckmarkListRowView<ListItem>(listItem: listItem, selectedListItem: $selectedListItem)
             }
         }
         .onChange(of: selectedListItem) { newValue in

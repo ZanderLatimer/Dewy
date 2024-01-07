@@ -1,5 +1,5 @@
 //
-//  CheckmarkListRow.swift
+//  CheckmarkListRowView.swift
 //  Dewy
 //
 //  Created by Zander Latimer on 9/26/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CheckmarkListRow<ListItem: UniqueDescribable>: View {
+struct CheckmarkListRowView<ListItem: UniqueDescribable>: View {
     
     @Binding private var selectedListItem: ListItem?
     
@@ -33,14 +33,15 @@ struct CheckmarkListRow<ListItem: UniqueDescribable>: View {
     }
 }
 
-struct CheckmarkListRow_Previews: PreviewProvider {
+struct CheckmarkListRowView_Previews: PreviewProvider {
+    
     static var previews: some View {
         let listItemA = AppTheme.light
         let listItemB = AppTheme.dark
         
         VStack {
-            CheckmarkListRow(listItem: listItemA, selectedListItem: .constant(listItemA))
-            CheckmarkListRow(listItem: listItemB, selectedListItem: .constant(listItemA))
+            CheckmarkListRowView(listItem: listItemA, selectedListItem: .constant(listItemA))
+            CheckmarkListRowView(listItem: listItemB, selectedListItem: .constant(listItemA))
         }
     }
 }
