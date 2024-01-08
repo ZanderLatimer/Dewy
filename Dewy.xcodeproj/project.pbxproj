@@ -15,6 +15,7 @@
 		3D1B78272AC363B500B906C3 /* SingleSelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B78262AC363B500B906C3 /* SingleSelectionListView.swift */; };
 		3D1B78292AC3689B00B906C3 /* CheckmarkListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1B78282AC3689B00B906C3 /* CheckmarkListRowView.swift */; };
 		3D8B864E2B4A04B8001D958F /* UniqueDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B864D2B4A04B8001D958F /* UniqueDescribable.swift */; };
+		3D8B86552B4B5800001D958F /* VerticalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86542B4B5800001D958F /* VerticalGridView.swift */; };
 		3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE912AA7A7C9005C8718 /* Weather.swift */; };
 		3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE932AA7B32E005C8718 /* UVIndex.swift */; };
 		3D8FFEA92AA7B47B005C8718 /* UVIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */; };
@@ -55,6 +56,7 @@
 		3D1B78262AC363B500B906C3 /* SingleSelectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionListView.swift; sourceTree = "<group>"; };
 		3D1B78282AC3689B00B906C3 /* CheckmarkListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkListRowView.swift; sourceTree = "<group>"; };
 		3D8B864D2B4A04B8001D958F /* UniqueDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueDescribable.swift; sourceTree = "<group>"; };
+		3D8B86542B4B5800001D958F /* VerticalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGridView.swift; sourceTree = "<group>"; };
 		3D8FFE912AA7A7C9005C8718 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3D8FFE932AA7B32E005C8718 /* UVIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndex.swift; sourceTree = "<group>"; };
 		3D8FFE9D2AA7B405005C8718 /* Unit Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,14 @@
 				3D1B78202AB2732B00B906C3 /* UserSettings.swift */,
 			);
 			path = "App Models";
+			sourceTree = "<group>";
+		};
+		3D8B86512B4B57C2001D958F /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				3D8B86542B4B5800001D958F /* VerticalGridView.swift */,
+			);
+			path = Grids;
 			sourceTree = "<group>";
 		};
 		3D8FFE902AA7A7AB005C8718 /* Model */ = {
@@ -245,6 +255,7 @@
 		3DE7BA142AA295E100C2444C /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				3D8B86512B4B57C2001D958F /* Grids */,
 				3D8B864A2B4A0474001D958F /* Lists */,
 				3D8FFEB72AA8021A005C8718 /* Sub-Elements */,
 				3D8FFEB62AA8020F005C8718 /* Cards */,
@@ -381,6 +392,7 @@
 				3DE7BA132AA295DA00C2444C /* MainTabView.swift in Sources */,
 				3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */,
 				3DE7BA022AA2882C00C2444C /* DewyApp.swift in Sources */,
+				3D8B86552B4B5800001D958F /* VerticalGridView.swift in Sources */,
 				3D1A00962AB25DA60017AAD1 /* PillView.swift in Sources */,
 				3D1B78212AB2732B00B906C3 /* UserSettings.swift in Sources */,
 				3D971BFF2AAA7F9400B0316E /* DataManager.swift in Sources */,
