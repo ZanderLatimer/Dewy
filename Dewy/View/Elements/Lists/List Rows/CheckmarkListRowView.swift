@@ -21,9 +21,14 @@ struct CheckmarkListRowView<ListItem: UniqueDisplayable>: View {
             listItem.descriptionView
             
             Spacer()
+            
             if selectedListItem?.id == listItem.id {
-                Image(systemName: "checkmark")
+                Image(systemName: "checkmark.square.fill")
                     .foregroundStyle(.blue)
+            }
+            else {
+                Image(systemName: "square")
+                    .foregroundStyle(.gray)
             }
         }
         .onTapGesture {
