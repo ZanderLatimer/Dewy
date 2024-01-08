@@ -13,7 +13,7 @@ import SwiftUI
 struct NavigationLinkWithDescriptionRowView<LinkContent: View>: View {
     
     private let title: String
-    private let description: String
+    private let description: String?
     
     @ViewBuilder private let linkDestination: () -> LinkContent
     
@@ -26,13 +26,15 @@ struct NavigationLinkWithDescriptionRowView<LinkContent: View>: View {
                 
                 Spacer()
                 
-                Text(description)
-                    .foregroundColor(.secondary)
+                if let description = description {
+                    Text(description)
+                        .foregroundColor(.secondary)
+                }
             }
         }
     }
     
-    init(title: String, description: String, @ViewBuilder linkDestination: @escaping () -> LinkContent) {
+    init(title: String, description: String?, @ViewBuilder linkDestination: @escaping () -> LinkContent) {
         self.title = title
         self.description = description
         self.linkDestination = linkDestination
