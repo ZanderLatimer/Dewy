@@ -17,8 +17,11 @@ struct UserView: View {
     @AppStorage(UserDefaults.Keys.UserView.temperatureUnit) private var preferredTemperatureUnit: TemperatureUnit = .celsius
     @AppStorage(UserDefaults.Keys.UserView.timeFormat) private var preferredTimeFormat: TimeFormat = .twelveHour
     @AppStorage(UserDefaults.Keys.UserView.appTheme) private var appTheme: AppTheme = .system
-    @AppStorage(UserDefaults.Keys.UserView.appIcon) private var appIcon: String = "Default"
     @AppStorage(UserDefaults.Keys.UserView.appLanguage) private var appLanguage: String = "English (US)"
+    
+    @StateObject private var changeAppIconViewModel = ChangeAppIconViewModel()
+    
+    @State private var appIcon: AppIcon?
     
     var body: some View {
         NavigationStack {
@@ -74,7 +77,21 @@ struct UserView: View {
                         }
                     )
                     
-                    DescriptionTapToActionSheetRowView(rowTitle: "App Icon", rowDescription: appIcon, actionSheetOptions: [])
+                    NavigationLinkWithDescriptionRowView(
+                        title: "App Icon",
+                        description: nil,
+                        linkDestination: {
+                            SingleSelectionListView<AppIcon>(
+                                listItems: AppIcon.allCases,
+                                selectedListItem: Binding<AppIcon?>(projectedValue: $appIcon),
+                                selectionChangedAction: { newValue in
+                                    if let newValue = newValue {
+                                        changeAppIconViewModel.updateAppIcon(to: newValue)
+                                    }
+                                })
+                            .navigationTitle("App Icon")
+                        })
+                    
                     DescriptionTapToActionSheetRowView(rowTitle: "Language", rowDescription: appLanguage, actionSheetOptions: [])
                 }
                 Section("About") {
@@ -83,6 +100,9 @@ struct UserView: View {
                 }
             }
             .navigationTitle("About Me")
+        }
+        .onAppear() {
+            appIcon = changeAppIconViewModel.selectedAppIcon
         }
     }
 }
