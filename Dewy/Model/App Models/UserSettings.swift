@@ -141,30 +141,4 @@ enum TimeFormat: String, CaseIterable {
     }
 }
 
-/// Defines an 'App Theme' ie. the colour scheme to use throughout the app.
-enum AppTheme: String, CaseIterable, UniqueDescribable {
-    case system
-    case light
-    case dark
-    
-    init(userDefaultsValue: String?) {
-        switch userDefaultsValue {
-        case AppTheme.system.rawValue: self = .system
-        case AppTheme.light.rawValue: self = .light
-        case AppTheme.dark.rawValue: self = .dark
-        default: self = .system
-        }
-    }
-    
-    var id: String {
-        return rawValue
-    }
-    
-    var description: String {
-        switch self {
-        case .system: return "System"
-        case .light: return "Light"
-        case .dark: return "Dark"
-        }
-    }
-}
+
