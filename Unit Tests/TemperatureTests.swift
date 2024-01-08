@@ -33,4 +33,27 @@ class TemperatureTests: XCTestCase {
         result = TemperatureHelper.toFahrenheit(celcius: -5.5)
         XCTAssertEqual(result, 22.1)
     }
+    
+    func test_temperatureHelper_toCelcius_shouldConvertCorrectly() {
+        var result = TemperatureHelper.toCelcius(fahrenheit: 32)
+        XCTAssertEqual(result, 0)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: 68)
+        XCTAssertEqual(result, 20)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: 122)
+        XCTAssertEqual(result, 50)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: -4)
+        XCTAssertEqual(result, -20)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: -58)
+        XCTAssertEqual(result, -50)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: 41.9)
+        XCTAssertEqual(result, 5.5)
+        
+        result = TemperatureHelper.toCelcius(fahrenheit: 22.1)
+        XCTAssertEqual(result, -5.5)
+    }
 }
