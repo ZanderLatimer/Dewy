@@ -26,9 +26,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 0)
-        XCTAssertEqual(unwrappedSut.uvIndex, .low)
-        XCTAssertEqual(unwrappedSut.name, "Low")
+        XCTAssertEqual(unwrappedSut.stringValue, "0")
+        XCTAssertEqual(unwrappedSut.classification, "Low")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexLow")
     }
     
@@ -37,9 +36,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 2.9)
-        XCTAssertEqual(unwrappedSut.uvIndex, .low)
-        XCTAssertEqual(unwrappedSut.name, "Low")
+        XCTAssertEqual(unwrappedSut.stringValue, "2.9")
+        XCTAssertEqual(unwrappedSut.classification, "Low")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexLow")
     }
     
@@ -48,9 +46,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 3)
-        XCTAssertEqual(unwrappedSut.uvIndex, .moderate)
-        XCTAssertEqual(unwrappedSut.name, "Moderate")
+        XCTAssertEqual(unwrappedSut.stringValue, "3")
+        XCTAssertEqual(unwrappedSut.classification, "Moderate")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexModerate")
     }
     
@@ -59,9 +56,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 5.9)
-        XCTAssertEqual(unwrappedSut.uvIndex, .moderate)
-        XCTAssertEqual(unwrappedSut.name, "Moderate")
+        XCTAssertEqual(unwrappedSut.stringValue, "5.9")
+        XCTAssertEqual(unwrappedSut.classification, "Moderate")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexModerate")
     }
     
@@ -70,9 +66,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 6)
-        XCTAssertEqual(unwrappedSut.uvIndex, .high)
-        XCTAssertEqual(unwrappedSut.name, "High")
+        XCTAssertEqual(unwrappedSut.stringValue, "6")
+        XCTAssertEqual(unwrappedSut.classification, "High")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexHigh")
     }
     
@@ -81,9 +76,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 7.9)
-        XCTAssertEqual(unwrappedSut.uvIndex, .high)
-        XCTAssertEqual(unwrappedSut.name, "High")
+        XCTAssertEqual(unwrappedSut.stringValue, "7.9")
+        XCTAssertEqual(unwrappedSut.classification, "High")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexHigh")
     }
     
@@ -92,9 +86,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 8)
-        XCTAssertEqual(unwrappedSut.uvIndex, .veryHigh)
-        XCTAssertEqual(unwrappedSut.name, "Very High")
+        XCTAssertEqual(unwrappedSut.stringValue, "8")
+        XCTAssertEqual(unwrappedSut.classification, "Very High")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexVeryHigh")
     }
     
@@ -103,9 +96,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 10.9)
-        XCTAssertEqual(unwrappedSut.uvIndex, .veryHigh)
-        XCTAssertEqual(unwrappedSut.name, "Very High")
+        XCTAssertEqual(unwrappedSut.stringValue, "10.9")
+        XCTAssertEqual(unwrappedSut.classification, "Very High")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexVeryHigh")
     }
     
@@ -114,9 +106,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 11)
-        XCTAssertEqual(unwrappedSut.uvIndex, .extreme)
-        XCTAssertEqual(unwrappedSut.name, "Extreme")
+        XCTAssertEqual(unwrappedSut.stringValue, "11")
+        XCTAssertEqual(unwrappedSut.classification, "Extreme")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexExtreme")
     }
     
@@ -125,9 +116,8 @@ class UVIndexTests: XCTestCase {
         
         let unwrappedSut = try XCTUnwrap(sut)
         
-        XCTAssertEqual(unwrappedSut.value, 20)
-        XCTAssertEqual(unwrappedSut.uvIndex, .extreme)
-        XCTAssertEqual(unwrappedSut.name, "Extreme")
+        XCTAssertEqual(unwrappedSut.stringValue, "20")
+        XCTAssertEqual(unwrappedSut.classification, "Extreme")
         XCTAssertEqual(unwrappedSut.colour, "uvIndexExtreme")
     }
 }
