@@ -10,7 +10,7 @@ import SwiftUI
 /**
  A `List` that displays one or more `CheckmarkListRowView` where only a single row can be selected at a time.
  */
-struct SingleSelectionListView<ListItem: UniqueDescribable>: View {
+struct SingleSelectionListView<ListItem: UniqueDisplayable>: View {
     
     @Binding private var selectedListItem: ListItem?
     

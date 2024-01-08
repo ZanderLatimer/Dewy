@@ -10,7 +10,7 @@ import SwiftUI
 /**
  A `List` row that displays a Title and Description. Displays a checkmark when tapped.
  */
-struct CheckmarkListRowView<ListItem: UniqueDescribable>: View {
+struct CheckmarkListRowView<ListItem: UniqueDisplayable>: View {
     
     @Binding private var selectedListItem: ListItem?
     
@@ -18,7 +18,8 @@ struct CheckmarkListRowView<ListItem: UniqueDescribable>: View {
     
     var body: some View {
         HStack {
-            Text(listItem.description)
+            listItem.descriptionView
+            
             Spacer()
             if selectedListItem?.id == listItem.id {
                 Image(systemName: "checkmark")
