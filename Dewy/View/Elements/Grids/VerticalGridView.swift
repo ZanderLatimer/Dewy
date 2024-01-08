@@ -22,7 +22,7 @@ struct VerticalGridView<Content: View>: View {
         }
     }
     
-    init(@ViewBuilder content: @escaping () -> Content, numColumns: Int = 3) {
+    init(@ViewBuilder content: @escaping () -> Content, numColumns: Int = 4) {
         self.content = content
         self.numColumns = numColumns
     }
