@@ -9,51 +9,22 @@ import SwiftUI
 
 struct TemperatureSubView: View {
     
-    private enum DisplayType: String {
-        case celsius = "Celsius"
-        case fahrenheit = "Fahrenhiet"
-        case both = "Both"
-        
-        init(rawValue: String?) {
-            switch rawValue {
-            case DisplayType.celsius.rawValue: self = .celsius
-            case DisplayType.fahrenheit.rawValue: self = .fahrenheit
-            case DisplayType.both.rawValue: self = .both
-            default:
-                switch Locale.autoupdatingCurrent.measurementSystem {
-                case .metric, .uk: self = .celsius
-                case .us: self = .fahrenheit
-                default: self = .celsius // If we have no information at all, default to celsius
-                }
-            }
-        }
-    }
-    
     private let temperatureCelsius: Decimal?
     
     var body: some View {
         if let temperatureCelsius = temperatureCelsius {
-            let rawDisplayType = UserDefaults.standard.string(forKey: "TemperatureDisplayType")
+            let temperatureUnit = UserDefaults.standard.preferredTemperatureUnit
             
-            let displayType = DisplayType(rawValue: rawDisplayType)
+            let displayString = temperatureUnit.displayString(celcius: temperatureCelsius)
             
-            switch displayType {
-            case .celsius:
-                Text("\(Int(temperatureCelsius))°C")
-            case .fahrenheit:
-                let fahrenheit = TemperatureHelper.toFahrenheit(celcius: temperatureCelsius)
-                Text("\(Int(fahrenheit))°F")
-            case .both:
-                let fahrenheit = TemperatureHelper.toFahrenheit(celcius: temperatureCelsius)
-                Text("\(Int(temperatureCelsius))°C|\(Int(fahrenheit))°F")
-            }
+            Text(displayString)
         }
         else {
             Text("-")
         }
     }
     
-    init(temperatureCelsius: Double?) {
+    init(temperatureCelsius: Decimal?) {
         self.temperatureCelsius = temperatureCelsius
     }
 }
