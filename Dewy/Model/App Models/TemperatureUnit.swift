@@ -35,7 +35,7 @@ enum TemperatureUnit: String, CaseIterable {
         switch self {
         case .celsius: return "°C"
         case .fahrenheit: return "°F"
-        case .both: return "Both"
+        case .both: return "°C | °F"
         }
     }
     
@@ -62,7 +62,7 @@ enum TemperatureUnit: String, CaseIterable {
         case .fahrenheit:
             return "\(fahrenheit)°F"
         case .both:
-            return "\(celcius)°C|\(fahrenheit)°F"
+            return "\(celcius)°C | \(fahrenheit)°F"
         }
     }
 }
