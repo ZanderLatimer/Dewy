@@ -48,9 +48,9 @@ struct UVIndex: Codable {
     private let value: Double
     private let uvIndex: UVIndex
     
-    var stringValue: String {
-        // Round to whole number if trailing zeroes
-        return String(format: "%g", value)
+    var displayValue: String {
+        // Only display the UV Index as a whole number
+        return "\(Int(value.rounded(decimalPlaces: 0)))"
     }
     
     var classification: String {

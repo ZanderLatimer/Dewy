@@ -20,7 +20,7 @@ struct CurrentWeatherCardView: View {
                 Text("Current: ")
                 TemperatureSubView(temperatureCelsius: weather?.temperatureCelsius)
                 
-                if let value = weather?.uvIndex?.stringValue,
+                if let value = weather?.uvIndex?.displayValue,
                    let colour = weather?.uvIndex?.colour {
                     PillView(value: "UVI \(value)", colour: Color(colour))
                 }
