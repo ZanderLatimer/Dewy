@@ -29,7 +29,7 @@ struct TemperatureSubView: View {
         }
     }
     
-    private let temperatureCelsius: Double?
+    private let temperatureCelsius: Decimal?
     
     var body: some View {
         if let temperatureCelsius = temperatureCelsius {

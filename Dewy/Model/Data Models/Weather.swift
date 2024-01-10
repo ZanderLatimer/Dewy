@@ -22,7 +22,7 @@ struct Weather: Codable {
     
     let forecastTimestamp: Date?
     let forecastLocation: Location?
-    let temperatureCelsius: Double?
+    let temperatureCelsius: Decimal?
     let uvIndex: UVIndex?
     
     enum CodingKeys: String, CodingKey {
@@ -40,7 +40,7 @@ struct Weather: Codable {
         self.requestLocation = try container.decode(Location.self, forKey: .requestLocation)
         self.forecastTimestamp = try container.decode(Date.self, forKey: .forecastTimestamp)
         self.forecastLocation = try container.decode(Location.self, forKey: .forecastLocation)
-        self.temperatureCelsius = try container.decode(Double.self, forKey: .temperatureCelsius)
+        self.temperatureCelsius = try container.decode(Decimal.self, forKey: .temperatureCelsius)
         
         let rawUVIndex = try container.decode(Double.self, forKey: .uvIndex)
         self.uvIndex = UVIndex(value: rawUVIndex)
@@ -51,7 +51,7 @@ struct Weather: Codable {
         requestLocation: Location,
         forecastTimestamp: Date?,
         forecastLocation: Location?,
-        temperatureCelsius: Double?,
+        temperatureCelsius: Decimal?,
         uvIndex: UVIndex?) {
             self.requestTimestamp = requestTimestamp
             self.requestLocation = requestLocation
