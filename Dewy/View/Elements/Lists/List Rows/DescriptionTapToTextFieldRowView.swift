@@ -43,6 +43,7 @@ struct DescriptionTapToTextFieldRowView: View {
                 .alert(textFieldTitle, isPresented: $showingAlert) {
                     TextField("", text: $fieldContents, prompt: Text(textFieldPrompt))
                         .focused($focused)
+                        .autocorrectionDisabled()
                     
                     Button("OK") {
                         completion(fieldContents)
