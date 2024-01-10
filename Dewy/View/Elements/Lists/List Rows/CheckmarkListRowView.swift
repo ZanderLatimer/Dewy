@@ -23,11 +23,11 @@ struct CheckmarkListRowView<ListItem: UniqueDisplayable>: View {
             Spacer()
             
             if selectedListItem?.id == listItem.id {
-                Image(systemName: "checkmark.square.fill")
+                Image(systemName: "checkmark.circle.fill")
                     .foregroundStyle(.blue)
             }
             else {
-                Image(systemName: "square")
+                Image(systemName: "circle")
                     .foregroundStyle(.gray)
             }
         }
