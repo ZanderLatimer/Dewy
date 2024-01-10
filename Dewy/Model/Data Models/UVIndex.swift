@@ -48,9 +48,15 @@ struct UVIndex: Codable {
     private let value: Double
     private let uvIndex: UVIndex
     
-    var displayValue: String {
-        // Only display the UV Index as a whole number
-        return "\(Int(value.rounded(decimalPlaces: 0)))"
+    init?(value: Double) {
+        // The UVIndex should be a representation of the UV Index as a whole number for display purposes
+        // For the precise value, use `value` instead
+        guard let uvIndex = UVIndex(value: value.rounded(decimalPlaces: 0)) else {
+            return nil
+        }
+        
+        self.value = value
+        self.uvIndex = uvIndex
     }
     
     var classification: String {
@@ -61,14 +67,10 @@ struct UVIndex: Codable {
         return uvIndex.colour
     }
     
-    init?(value: Double) {
-        // The UVIndex should be a representation of the UV Index as a whole number for display purposes
-        // For the precise value, use `value` instead
-        guard let uvIndex = UVIndex(value: value.rounded(decimalPlaces: 0)) else {
-            return nil
-        }
-        
-        self.value = value
-        self.uvIndex = uvIndex
+    // MARK: Display
+    
+    var displayValue: String {
+        // Only display the UV Index as a whole number
+        return "\(Int(value.rounded(decimalPlaces: 0)))"
     }
 }
