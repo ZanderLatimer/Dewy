@@ -5,7 +5,7 @@
 //  Created by Zander Latimer on 9/5/23.
 //
 
-import Foundation
+import SwiftUI
 
 /**
  Models a UV Index reading, such as its value, classification and colour.
@@ -34,13 +34,13 @@ struct UVIndex: Codable {
             return self.rawValue
         }
         
-        var colour: String {
+        var colour: Color {
             switch self {
-            case .low: return "uvIndexLow"
-            case .moderate: return "uvIndexModerate"
-            case .high: return "uvIndexHigh"
-            case .veryHigh: return "uvIndexVeryHigh"
-            case .extreme: return "uvIndexExtreme"
+            case .low: return Color.UVIndex.Low
+            case .moderate: return Color.UVIndex.Moderate
+            case .high: return Color.UVIndex.High
+            case .veryHigh: return Color.UVIndex.VeryHigh
+            case .extreme: return Color.UVIndex.Extreme
             }
         }
     }
@@ -63,7 +63,7 @@ struct UVIndex: Codable {
         return uvIndex.classification
     }
     
-    var colour: String {
+    var colour: Color {
         return uvIndex.colour
     }
     

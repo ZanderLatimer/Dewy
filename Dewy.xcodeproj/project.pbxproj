@@ -22,6 +22,7 @@
 		3D8B86632B4F2809001D958F /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86622B4F2809001D958F /* TemperatureUnit.swift */; };
 		3D8B86662B4F2DD2001D958F /* Number+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */; };
 		3D8B86682B4F3058001D958F /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86672B4F3058001D958F /* NumberTests.swift */; };
+		3D8B866B2B4F56A8001D958F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B866A2B4F56A8001D958F /* Color+Extensions.swift */; };
 		3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE912AA7A7C9005C8718 /* Weather.swift */; };
 		3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE932AA7B32E005C8718 /* UVIndex.swift */; };
 		3D8FFEA92AA7B47B005C8718 /* UVIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */; };
@@ -69,6 +70,7 @@
 		3D8B86622B4F2809001D958F /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extensions.swift"; sourceTree = "<group>"; };
 		3D8B86672B4F3058001D958F /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
+		3D8B866A2B4F56A8001D958F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		3D8FFE912AA7A7C9005C8718 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3D8FFE932AA7B32E005C8718 /* UVIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndex.swift; sourceTree = "<group>"; };
 		3D8FFE9D2AA7B405005C8718 /* Unit Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 			children = (
 				3D8FFEAE2AA7F5D0005C8718 /* Data+Extensions.swift */,
 				3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */,
+				3D8B866A2B4F56A8001D958F /* Color+Extensions.swift */,
 			);
 			path = "Native Extensions";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				3D1B78292AC3689B00B906C3 /* CheckmarkListRowView.swift in Sources */,
 				3DE7BA112AA28C9F00C2444C /* InfoCardWrapperView.swift in Sources */,
 				3DE7BA162AA29F3100C2444C /* UserView.swift in Sources */,
+				3D8B866B2B4F56A8001D958F /* Color+Extensions.swift in Sources */,
 				3D1B78252AC35E5400B906C3 /* NavigationLinkWithDescriptionRowView.swift in Sources */,
 				3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */,
 				3D8FFEB12AA7F6A4005C8718 /* Location.swift in Sources */,
