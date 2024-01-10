@@ -26,10 +26,6 @@ struct CheckmarkListRowView<ListItem: UniqueDisplayable>: View {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundStyle(.blue)
             }
-            else {
-                Image(systemName: "circle")
-                    .foregroundStyle(.gray)
-            }
         }
         .onTapGesture {
             selectedListItem = listItem
