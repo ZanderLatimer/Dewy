@@ -62,7 +62,9 @@ struct UVIndex: Codable {
     }
     
     init?(value: Double) {
-        guard let uvIndex = UVIndex(value: value) else {
+        // The UVIndex should be a representation of the UV Index as a whole number for display purposes
+        // For the precise value, use `value` instead
+        guard let uvIndex = UVIndex(value: value.rounded(decimalPlaces: 0)) else {
             return nil
         }
         
