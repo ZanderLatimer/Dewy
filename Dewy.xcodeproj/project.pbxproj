@@ -20,17 +20,17 @@
 		3D8B865F2B4CA9BD001D958F /* ChangeAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B865E2B4CA9BD001D958F /* ChangeAppIconViewModel.swift */; };
 		3D8B86612B4CAB11001D958F /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86602B4CAB11001D958F /* AppTheme.swift */; };
 		3D8B86632B4F2809001D958F /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86622B4F2809001D958F /* TemperatureUnit.swift */; };
-		3D8B86662B4F2DD2001D958F /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86652B4F2DD2001D958F /* Number.swift */; };
+		3D8B86662B4F2DD2001D958F /* Number+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */; };
 		3D8B86682B4F3058001D958F /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B86672B4F3058001D958F /* NumberTests.swift */; };
 		3D8FFE922AA7A7C9005C8718 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE912AA7A7C9005C8718 /* Weather.swift */; };
 		3D8FFE942AA7B32E005C8718 /* UVIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFE932AA7B32E005C8718 /* UVIndex.swift */; };
 		3D8FFEA92AA7B47B005C8718 /* UVIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */; };
 		3D8FFEAB2AA7CFAD005C8718 /* getWeatherExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FFEAA2AA7CFAD005C8718 /* getWeatherExample.json */; };
-		3D8FFEAF2AA7F5D0005C8718 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEAE2AA7F5D0005C8718 /* Data.swift */; };
+		3D8FFEAF2AA7F5D0005C8718 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEAE2AA7F5D0005C8718 /* Data+Extensions.swift */; };
 		3D8FFEB12AA7F6A4005C8718 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEB02AA7F6A4005C8718 /* Location.swift */; };
 		3D8FFEB32AA7F709005C8718 /* CurrentWeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEB22AA7F709005C8718 /* CurrentWeatherCardView.swift */; };
 		3D8FFEB92AA80233005C8718 /* TemperatureSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FFEB82AA80233005C8718 /* TemperatureSubView.swift */; };
-		3D971BFA2AAA7A9B00B0316E /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D971BF92AAA7A9B00B0316E /* Temperature.swift */; };
+		3D971BFA2AAA7A9B00B0316E /* TemperatureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D971BF92AAA7A9B00B0316E /* TemperatureHelper.swift */; };
 		3D971BFC2AAA7B1300B0316E /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D971BFB2AAA7B1300B0316E /* TemperatureTests.swift */; };
 		3D971BFF2AAA7F9400B0316E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D971BFE2AAA7F9400B0316E /* DataManager.swift */; };
 		3DE7BA022AA2882C00C2444C /* DewyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7BA012AA2882C00C2444C /* DewyApp.swift */; };
@@ -67,18 +67,18 @@
 		3D8B865E2B4CA9BD001D958F /* ChangeAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAppIconViewModel.swift; sourceTree = "<group>"; };
 		3D8B86602B4CAB11001D958F /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		3D8B86622B4F2809001D958F /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
-		3D8B86652B4F2DD2001D958F /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extensions.swift"; sourceTree = "<group>"; };
 		3D8B86672B4F3058001D958F /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		3D8FFE912AA7A7C9005C8718 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3D8FFE932AA7B32E005C8718 /* UVIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndex.swift; sourceTree = "<group>"; };
 		3D8FFE9D2AA7B405005C8718 /* Unit Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8FFEA82AA7B47B005C8718 /* UVIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIndexTests.swift; sourceTree = "<group>"; };
 		3D8FFEAA2AA7CFAD005C8718 /* getWeatherExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = getWeatherExample.json; path = ../../../../../Downloads/getWeatherExample.json; sourceTree = "<group>"; };
-		3D8FFEAE2AA7F5D0005C8718 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		3D8FFEAE2AA7F5D0005C8718 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		3D8FFEB02AA7F6A4005C8718 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3D8FFEB22AA7F709005C8718 /* CurrentWeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCardView.swift; sourceTree = "<group>"; };
 		3D8FFEB82AA80233005C8718 /* TemperatureSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSubView.swift; sourceTree = "<group>"; };
-		3D971BF92AAA7A9B00B0316E /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		3D971BF92AAA7A9B00B0316E /* TemperatureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHelper.swift; sourceTree = "<group>"; };
 		3D971BFB2AAA7B1300B0316E /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		3D971BFE2AAA7F9400B0316E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3DE7B9FE2AA2882C00C2444C /* Dewy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dewy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +176,15 @@
 			path = "App View Models";
 			sourceTree = "<group>";
 		};
+		3D8B86692B4F5232001D958F /* Native Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D8FFEAE2AA7F5D0005C8718 /* Data+Extensions.swift */,
+				3D8B86652B4F2DD2001D958F /* Number+Extensions.swift */,
+			);
+			path = "Native Extensions";
+			sourceTree = "<group>";
+		};
 		3D8FFE902AA7A7AB005C8718 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,9 +208,7 @@
 		3D8FFEAD2AA7F5B7005C8718 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3D8FFEAE2AA7F5D0005C8718 /* Data.swift */,
-				3D971BF92AAA7A9B00B0316E /* Temperature.swift */,
-				3D8B86652B4F2DD2001D958F /* Number.swift */,
+				3D971BF92AAA7A9B00B0316E /* TemperatureHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -253,11 +260,12 @@
 		3DE7BA002AA2882C00C2444C /* Dewy */ = {
 			isa = PBXGroup;
 			children = (
-				3D8B865C2B4CA9A1001D958F /* View Model */,
 				3D8FFE902AA7A7AB005C8718 /* Model */,
 				3DE7BA0F2AA28C8600C2444C /* View */,
+				3D8B865C2B4CA9A1001D958F /* View Model */,
 				3D971BFD2AAA7F7200B0316E /* Networking */,
 				3D8FFEAD2AA7F5B7005C8718 /* Helpers */,
+				3D8B86692B4F5232001D958F /* Native Extensions */,
 				3DE7BA012AA2882C00C2444C /* DewyApp.swift */,
 				3DE7BA052AA2882C00C2444C /* Assets.xcassets */,
 				3D8FFEAA2AA7CFAD005C8718 /* getWeatherExample.json */,
@@ -417,7 +425,7 @@
 				3D8B86612B4CAB11001D958F /* AppTheme.swift in Sources */,
 				3D8B864E2B4A04B8001D958F /* UniqueDisplayable.swift in Sources */,
 				3D1B78232AC21BD500B906C3 /* DescriptionTapToTextFieldRowView.swift in Sources */,
-				3D971BFA2AAA7A9B00B0316E /* Temperature.swift in Sources */,
+				3D971BFA2AAA7A9B00B0316E /* TemperatureHelper.swift in Sources */,
 				3D8FFEB92AA80233005C8718 /* TemperatureSubView.swift in Sources */,
 				3D1B78292AC3689B00B906C3 /* CheckmarkListRowView.swift in Sources */,
 				3DE7BA112AA28C9F00C2444C /* InfoCardWrapperView.swift in Sources */,
@@ -431,12 +439,12 @@
 				3D8B865F2B4CA9BD001D958F /* ChangeAppIconViewModel.swift in Sources */,
 				3DE7BA022AA2882C00C2444C /* DewyApp.swift in Sources */,
 				3D8B86552B4B5800001D958F /* VerticalGridView.swift in Sources */,
-				3D8B86662B4F2DD2001D958F /* Number.swift in Sources */,
+				3D8B86662B4F2DD2001D958F /* Number+Extensions.swift in Sources */,
 				3D1A00962AB25DA60017AAD1 /* PillView.swift in Sources */,
 				3D8B86572B4B780F001D958F /* AppIcon.swift in Sources */,
 				3D1B78212AB2732B00B906C3 /* UserSettings.swift in Sources */,
 				3D971BFF2AAA7F9400B0316E /* DataManager.swift in Sources */,
-				3D8FFEAF2AA7F5D0005C8718 /* Data.swift in Sources */,
+				3D8FFEAF2AA7F5D0005C8718 /* Data+Extensions.swift in Sources */,
 				3D1B78272AC363B500B906C3 /* SingleSelectionListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

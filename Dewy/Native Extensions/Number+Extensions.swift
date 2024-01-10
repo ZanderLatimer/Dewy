@@ -1,5 +1,5 @@
 //
-//  Number.swift
+//  Number+Extensions.swift
 //  Dewy
 //
 //  Created by Zander Latimer on 10/1/24.

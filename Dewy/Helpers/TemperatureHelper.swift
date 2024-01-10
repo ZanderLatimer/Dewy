@@ -1,5 +1,5 @@
 //
-//  Temperature.swift
+//  TemperatureHelper.swift
 //  Dewy
 //
 //  Created by Zander Latimer on 9/7/23.
