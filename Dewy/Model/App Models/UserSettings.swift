@@ -89,37 +89,6 @@ enum SkinType: String, CaseIterable {
     }
 }
 
-/// Defines a 'Temperature Unit' ie. the temperature style to use throughout the app.
-enum TemperatureUnit: String, CaseIterable {
-    case celsius
-    case fahrenheit
-    case both
-    
-    init(userDefaultsValue: String?) {
-        switch userDefaultsValue {
-        case TemperatureUnit.celsius.rawValue: self = .celsius
-        case TemperatureUnit.fahrenheit.rawValue: self = .fahrenheit
-        case TemperatureUnit.both.rawValue: self = .both
-        // If the user has not saved a unit to UserDefaults, then we make a choice
-        // based on their location
-        default:
-            switch Locale.autoupdatingCurrent.measurementSystem {
-            case .metric, .uk: self = .celsius
-            case .us: self = .fahrenheit
-            default: self = .celsius // If we have no information at all, default to celsius
-            }
-        }
-    }
-    
-    var description: String {
-        switch self {
-        case .celsius: return "°C"
-        case .fahrenheit: return "°F"
-        case .both: return "Both"
-        }
-    }
-}
-
 /// Defines a 'Time Format' ie. the time format to use throughout the app.
 enum TimeFormat: String, CaseIterable {
     case twelveHour
