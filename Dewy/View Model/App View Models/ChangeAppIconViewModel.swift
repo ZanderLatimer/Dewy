@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 class ChangeAppIconViewModel: ObservableObject {
     
     @Published private(set) var selectedAppIcon: AppIcon
